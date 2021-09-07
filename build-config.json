@@ -1,0 +1,11 @@
+{
+  "areaVisibility": true,
+  "parentStopLinking": true,
+  "osmWayPropertySet": "germany",
+  "subwayAccessTime": 0,
+  "staticBikeParkAndRide": true,
+  "writeCachedElevations": false,
+  "multiThreadElevationCalculations": false,
+  "dataImportReport": true,
+  "buildReportDir": "build-report"
+}
