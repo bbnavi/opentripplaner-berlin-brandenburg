@@ -8,7 +8,7 @@ ARG gtfs_url=https://www.openvvs.de/dataset/e66f03e4-79f2-41d0-90f1-166ca609e491
 ENV GTFS_URL=$gtfs_url
 ARG osm_pbf_url=http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
 ENV OSM_PBF_URL=$osm_pbf_url
-ARG memory=31G
+ARG memory=4G
 ENV MEMORY=$memory
 
 RUN apk add --update zip && \
