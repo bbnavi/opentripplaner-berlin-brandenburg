@@ -4,7 +4,7 @@ ARG OTP_IMAGE=mfdz/opentripplanner
 FROM $OTP_IMAGE:$OTP_TAG AS otp
 
 # defined empty, so we can access the arg as env later again
-ARG gtfs_url=https://www.openvvs.de/dataset/e66f03e4-79f2-41d0-90f1-166ca609e491/resource/bfbb59c7-767c-4bca-bbb2-d8d32a3e0378/download/google_transit.zip
+ARG gtfs_url=https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/GTFS.zip
 ENV GTFS_URL=$gtfs_url
 ARG osm_pbf_url=http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
 ENV OSM_PBF_URL=$osm_pbf_url
