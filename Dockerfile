@@ -8,7 +8,7 @@ ARG gtfs_url=https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensae
 ENV GTFS_URL=$gtfs_url
 ARG osm_pbf_url=http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
 ENV OSM_PBF_URL=$osm_pbf_url
-ARG memory=4G
+ARG memory=5G
 ENV MEMORY=$memory
 
 RUN apk add --update zip && \
