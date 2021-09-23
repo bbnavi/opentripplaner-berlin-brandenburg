@@ -1,6 +1,5 @@
 version: '3.7'
 
-
 services:
   opentripplanner:
     deploy:
@@ -12,5 +11,5 @@ services:
         traefik.docker.network: public
         traefik.enable: "true"
         traefik.frontend.passHostHeader: "true"
-        traefik.frontend.rule: Host:api.tpwd-bb-navi.customer.planetary-quantum.net
+        traefik.frontend.rule: Host:api.tpwd-bb-navi.customer.planetary-quantum.net,api.angermuende.bbnavi.de
         traefik.port: '8080'

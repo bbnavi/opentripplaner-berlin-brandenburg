@@ -23,6 +23,7 @@ ADD build-config.json /opt/opentripplanner/build/
 ADD otp-config.json /opt/opentripplanner/build/
 ADD $OSM_PBF_URL /opt/opentripplanner/build/
 ADD $GTFS_URL /opt/opentripplanner/build/gtfs.zip
+ADD dgm/* /opt/opentripplanner/build/
 
 # print version
 RUN java -jar otp-shaded.jar --version | tee build/version.txt
