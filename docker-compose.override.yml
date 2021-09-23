@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  opentripplanner:
+    build:
+      context: .
+      args:
+        - OTP_IMAGE=${OTP_IMAGE}
+        - OTP_TAG=${OTP_TAG}
+        - gtfs_url=${GTFS_URL}
+        - osm_pbf_url=${OSM_URL}
+        - memory=${GRAPH_BUILD_MEMORY}
+    labels:
+      traefik.docker.network: public
+      traefik.enable: "true"
+      traefik.frontend.passHostHeader: "true"
+      traefik.frontend.rule: Host:api-bbnavi.docker.localhost
+      traefik.port: '8080'
