@@ -24,6 +24,8 @@ before_script:
     - docker build --cache-from $IMAGE:latest --tag $IMAGE:$CI_COMMIT_SHA --tag $IMAGE:latest -f $DOCKERFILE .
     - docker push $IMAGE:$CI_COMMIT_SHA
     - docker push $IMAGE:latest
+  only:
+    - master
 
 .quantum-conf: &quantum-conf
   stage: predeploy
