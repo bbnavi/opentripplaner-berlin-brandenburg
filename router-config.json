@@ -180,6 +180,22 @@
       "frequencySec": 600,
       "feedId": "park-api",
       "url": "https://{{ api_hostname }}/kreis_reutlingen/parking/parkapi.json"
+    },
+    {
+      "id": "nextbike-potsdam",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dc/gbfs.json",
+      "network": "cargo-bike"
+    },
+    {
+      "id": "nextbike-berlin",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json",
+      "network": "cargo-bike"
     }
   ]
 }
