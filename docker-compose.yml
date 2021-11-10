@@ -15,7 +15,7 @@ services:
       - OTP_TAG=latest
       - CONFIG=bb_angermuende
       - GEOCODING_BASE_URL=https://photon.stadtnavi.eu/pelias/v1
-    image: registry.gitlab.tpwd.de/tpwd/bb-navi/bb-navi-opentripplaner-deployment/opentripplaner-berlin-brandenburg
+    image: registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:latest
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/"]
       interval: 15s
