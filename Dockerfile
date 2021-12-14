@@ -4,7 +4,12 @@ ARG OTP_IMAGE=mfdz/opentripplanner
 FROM $OTP_IMAGE:$OTP_TAG AS otp
 
 # defined empty, so we can access the arg as env later again
-ARG gtfs_url=https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/GTFS.zip
+
+# GTFS der VBB
+# ARG gtfs_url=https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/GTFS.zip
+
+# GTFS Daten von delfi (#BBNAV-71)
+ARG gtfs_url=https://gtfs.mfdz.de/DELFI.BB.gtfs.zip
 ENV GTFS_URL=$gtfs_url
 
 # OSM Tool zum erstellen von eigenen OSM Daten: Osmium
