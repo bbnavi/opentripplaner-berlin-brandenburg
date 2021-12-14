@@ -15,7 +15,7 @@ ENV GTFS_URL=$gtfs_url
 # OSM Tool zum erstellen von eigenen OSM Daten: Osmium
 ARG osm_pbf_url=http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
 ENV OSM_PBF_URL=$osm_pbf_url
-ARG memory=10G
+ARG memory=6G
 ENV MEMORY=$memory
 
 RUN apk add --update zip && \
