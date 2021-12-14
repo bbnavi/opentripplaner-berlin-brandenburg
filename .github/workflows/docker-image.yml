@@ -26,7 +26,7 @@ jobs:
         cache-from: |
           type=registry,ref=registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg
         push: true
-        tags: registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:latest
+        tags: registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:staging
   deploy:
     runs-on: ubuntu-latest
     needs:
