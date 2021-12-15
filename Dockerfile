@@ -17,7 +17,7 @@ ENV GTFS_URL=$gtfs_url
 ARG osm_pbf_url=https://gtfs.mfdz.de/bb-buffered.osm.pbf
 ENV OSM_PBF_URL=$osm_pbf_url
 
-ARG memory=16G
+ARG memory=20G
 ENV MEMORY=$memory
 
 RUN apk add --update zip && \
