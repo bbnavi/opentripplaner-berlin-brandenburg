@@ -13,8 +13,10 @@ ARG gtfs_url=https://gtfs.mfdz.de/DELFI.BB.gtfs.zip
 ENV GTFS_URL=$gtfs_url
 
 # OSM Tool zum erstellen von eigenen OSM Daten: Osmium
-ARG osm_pbf_url=http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
+# ARG osm_pbf_url=http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
+ARG osm_pbf_url=https://gtfs.mfdz.de/bb-buffered.osm.pbf
 ENV OSM_PBF_URL=$osm_pbf_url
+
 ARG memory=16G
 ENV MEMORY=$memory
 
