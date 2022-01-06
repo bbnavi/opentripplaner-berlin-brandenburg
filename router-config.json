@@ -69,7 +69,7 @@
   ],
   "updaters": [
     {
-      "id": "nextbike-potsdam",
+      "id": "nextbike_dc",
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
@@ -77,11 +77,35 @@
       "network": "cargo-bike"
     },
     {
-      "id": "nextbike-berlin",
+      "id": "nextbike_bn",
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json",
+      "network": "cargo-bike"
+    },
+    {
+      "id": "barshare-bike",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://data.mfdz.de/gbfs/barshare/bicycle/gbfs.json",
+      "network": "cargo-bike"
+    },
+    {
+      "id": "barshare-car",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://data.mfdz.de/gbfs/barshare/car/gbfs.json",
+      "network": "car-sharing"
+    },
+    {
+      "id": "barshare-other",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://data.mfdz.de/gbfs/barshare/other/gbfs.json",
       "network": "cargo-bike"
     }
   ]
