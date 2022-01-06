@@ -180,6 +180,31 @@
       "frequencySec": 600,
       "feedId": "park-api",
       "url": "https://{{ api_hostname }}/kreis_reutlingen/parking/parkapi.json"
+    },
+    {
+      "id": "barshare-bike",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://data.mfdz.de/gbfs/barshare/bicycle/gbfs.json",
+      "network": "cargo-bike"
+    },
+    {
+      "id": "barshare-car",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://data.mfdz.de/gbfs/barshare/car/gbfs.json",
+      "network": "car-sharing"
+    }
+    },
+    {
+      "id": "barshare-other",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://data.mfdz.de/gbfs/barshare/other/gbfs.json",
+      "network": "cargo-bike"
     }
   ]
 }
