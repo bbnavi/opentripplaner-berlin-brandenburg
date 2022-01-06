@@ -8,3 +8,14 @@ docker buildx create --driver-opt env.BUILDKIT_STEP_LOG_MAX_SIZE=1000000,env.BUI
 
 docker buildx build .
 ```
+
+
+OSB Ausschneiden:
+https://docs.osmcode.org/osmium/latest/osmium-extract.html
+https://github.com/mfdz/gtfs-hub/blob/16427530380765078981105c0201d69fd44117ac/makefile#L53
+https://github.com/stadtnavi/digitransit-ansible/blob/master/roles/tilemaker/templates/build-mbtiles#L51
+https://github.com/leonardehrenfried/otp2-setup/
+
+# Traversal Permissions Map Layer im staging.api.bbnavi.de
+# OSM sind auch Fußwege (Braune Pfade im OTP)
+# Bahnhöfe sind im GTFS (blaue Pfade im OTP)

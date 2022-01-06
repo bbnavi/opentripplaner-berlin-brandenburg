@@ -4,13 +4,20 @@ ARG OTP_IMAGE=mfdz/opentripplanner
 FROM $OTP_IMAGE:$OTP_TAG AS otp
 
 # defined empty, so we can access the arg as env later again
-ARG gtfs_url=https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/GTFS.zip
+
+# GTFS der VBB
+# ARG gtfs_url=https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/GTFS.zip
+
+# GTFS Daten von delfi (#BBNAV-71)
+ARG gtfs_url=https://gtfs.mfdz.de/DELFI.BB.gtfs.zip
 ENV GTFS_URL=$gtfs_url
 
 # OSM Tool zum erstellen von eigenen OSM Daten: Osmium
-ARG osm_pbf_url=http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
+# ARG osm_pbf_url=http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
+ARG osm_pbf_url=https://gtfs.mfdz.de/bb-buffered.osm.pbf
 ENV OSM_PBF_URL=$osm_pbf_url
-ARG memory=5G
+
+ARG memory=20G
 ENV MEMORY=$memory
 
 RUN apk add --update zip && \

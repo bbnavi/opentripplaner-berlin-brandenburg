@@ -9,13 +9,13 @@ services:
       - DT_TAG=next
       - GTFS_URL=https://www.openvvs.de/dataset/e66f03e4-79f2-41d0-90f1-166ca609e491/resource/bfbb59c7-767c-4bca-bbb2-d8d32a3e0378/download/google_transit.zip
       - OSM_URL=https://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
-      - GRAPH_BUILD_MEMORY=5G
+      - GRAPH_BUILD_MEMORY=10G
       - OTP_PORT=8090
       - OTP_IMAGE=mfdz/opentripplanner
       - OTP_TAG=latest
       - CONFIG=bb_angermuende
       - GEOCODING_BASE_URL=https://photon.stadtnavi.eu/pelias/v1
-    image: registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:latest
+    image: registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:staging
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/"]
       interval: 15s
@@ -23,6 +23,18 @@ services:
       retries: 30
     networks:
       - public
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == node-001.tpwd-bb-navi
+      labels:
+        traefik.docker.network: public
+        traefik.enable: "true"
+        traefik.frontend.passHostHeader: "true"
+        traefik.frontend.rule: Host:staging.api.bbnavi.de
+        traefik.port: '8080'
+
 
 networks:
   public:
