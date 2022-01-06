@@ -196,7 +196,6 @@
       "sourceType": "gbfs",
       "url": "https://data.mfdz.de/gbfs/barshare/car/gbfs.json",
       "network": "car-sharing"
-    }
     },
     {
       "id": "barshare-other",
