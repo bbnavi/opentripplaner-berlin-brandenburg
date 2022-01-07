@@ -9,11 +9,11 @@ docker buildx create --driver-opt env.BUILDKIT_STEP_LOG_MAX_SIZE=1000000,env.BUI
 docker buildx build .
 
 docker build --tag registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:staging -f Dockerfile .
+docker login -u gitlab-ci-token -p [PERSONAL_ACCESS_TOKEN] registry.gitlab.tpwd.de
 docker push registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:staging
 docker-compose -f docker-compose.yml -f stack.yml config > quantum.yml
 quantum-cli stack update --create --stack staging-otp-berlin-brandenburg-tpwd-bb-navi --wait
 ```
-
 
 OSB Ausschneiden:
 https://docs.osmcode.org/osmium/latest/osmium-extract.html
