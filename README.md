@@ -7,6 +7,11 @@ Um das vollständige Log sehen zu können muss die CLI erweiterung buildx verwen
 docker buildx create --driver-opt env.BUILDKIT_STEP_LOG_MAX_SIZE=1000000,env.BUILDKIT_STEP_LOG_MAX_SPEED=100000000 --use
 
 docker buildx build .
+
+docker build --tag registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:staging -f Dockerfile .
+docker push registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:staging
+docker-compose -f docker-compose.yml -f stack.yml config > quantum.yml
+quantum-cli stack update --create --stack staging-otp-berlin-brandenburg-tpwd-bb-navi --wait
 ```
 
 
