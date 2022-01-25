@@ -13,8 +13,15 @@ ARG gtfs_url=https://gtfs.mfdz.de/DELFI.BB.gtfs.zip
 ENV GTFS_URL=$gtfs_url
 
 # GTFS Daten von fahrgemeinschaft mifaz
-ARG gtfs_carpool_url=http://gtfs.mfdz.de/carpool/LSGcjyBInj8tA4UfOyVzX7d0FYlOKf8x/mfdz.bb.gtfs.zip
-ENV GTFS_CARPOOL_URL=$gtfs_carpool_url
+# URL ist hinterlegt in GITHUB Secrets: GTFS_CARPOOL_URL
+# RUN --mount=type=secret,id=GTFS_CARPOOL_URL echo "export GTFS_CARPOOL_URL=$(cat /run/secrets/GTFS_CARPOOL_URL)" >> /envfile
+# RUN . /envfile; echo $GTFS_CARPOOL_URL
+RUN --mount=type=secret,id=GTFS_CARPOOL_URL export GTFS_CARPOOL_URL=$(cat /run/secrets/GTFS_CARPOOL_URL) && curl -LJO $GTFS_CARPOOL_URL
+# RUN cat /envfile
+# ARG gtfs_carpool_url=echo "$(cat /run/secrets/GTFS_CARPOOL_URL)"
+# ENV GTFS_CARPOOL_URL=$gtfs_carpool_url
+# ARG GTFS_CARPOOL_URL
+# ENV GTFS_CARPOOL_URL=${GTFS_CARPOOL_URL}
 
 # GTFS Daten von FlexFeed derhuerst
 # ARG gtfs_felxfeed_url=https://github.com/bbnavi/gtfs-flex/archive/refs/heads/main.zip
@@ -40,7 +47,7 @@ ADD build-config.json /opt/opentripplanner/build/
 ADD otp-config.json /opt/opentripplanner/build/
 ADD $OSM_PBF_URL /opt/opentripplanner/build/
 ADD $GTFS_URL /opt/opentripplanner/build/gtfs.zip
-ADD $GTFS_CARPOOL_URL /opt/opentripplanner/build/gtfs-carpool.zip
+RUN cp mfdz.bb.gtfs.zip /opt/opentripplanner/build/gtfs-carpool.zip
 # ADD $GTFS_FLEXFEED_URL /opt/opentripplanner/build/gtfs-derhuerst.zip
 ADD dgm/* /opt/opentripplanner/build/
 

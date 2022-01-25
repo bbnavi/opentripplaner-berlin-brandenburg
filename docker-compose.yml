@@ -9,6 +9,7 @@ services:
       - DT_TAG=next
       - GTFS_URL=https://gtfs.mfdz.de/DELFI.BB.gtfs.zip
       - OSM_URL=https://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
+      - GTFS_CARPOOL_URL=""
       - GRAPH_BUILD_MEMORY=10G
       - OTP_PORT=8090
       - OTP_IMAGE=mfdz/opentripplanner
