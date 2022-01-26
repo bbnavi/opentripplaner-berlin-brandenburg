@@ -1,4 +1,5 @@
 {
+  "useFlexService": true,
   "routingDefaults": {
     "walkSpeed": 1.3,
     "transferSlack": 100,
@@ -27,7 +28,10 @@
     },
     "transit": {
       "searchThreadPoolSize": 4
-    }
+    },
+    "flexCallAndRideReluctance": 1,
+    "flexMaxCallAndRideSeconds": 7200,
+    "flexFlagStopExtraPenalty": 60
   },
   "vectorTileLayers": [
     {
