@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1.2
+
 ARG OTP_TAG=latest
 ARG OTP_IMAGE=mfdz/opentripplanner
 
