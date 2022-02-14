@@ -43,7 +43,7 @@ ADD otp-config.json /opt/opentripplanner/build/
 ADD $OSM_PBF_URL /opt/opentripplanner/build/
 ADD $GTFS_URL /opt/opentripplanner/build/gtfs.zip
 RUN cp mfdz.bb.gtfs.zip /opt/opentripplanner/build/gtfs-carpool.zip
-ADD $GTFS_FLEXFEED_URL /opt/opentripplanner/build/gtfs-derhuerst.zip
+ADD $GTFS_FLEXFEED_URL /opt/opentripplanner/build/
 ADD dgm/* /opt/opentripplanner/build/
 
 # print version
