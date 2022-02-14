@@ -14,18 +14,11 @@ ENV GTFS_URL=$gtfs_url
 
 # GTFS Daten von fahrgemeinschaft mifaz
 # URL ist hinterlegt in GITHUB Secrets: GTFS_CARPOOL_URL
-# RUN --mount=type=secret,id=GTFS_CARPOOL_URL echo "export GTFS_CARPOOL_URL=$(cat /run/secrets/GTFS_CARPOOL_URL)" >> /envfile
-# RUN . /envfile; echo $GTFS_CARPOOL_URL
 RUN --mount=type=secret,id=GTFS_CARPOOL_URL export GTFS_CARPOOL_URL=$(cat /run/secrets/GTFS_CARPOOL_URL) && curl -LJO $GTFS_CARPOOL_URL
-# RUN cat /envfile
-# ARG gtfs_carpool_url=echo "$(cat /run/secrets/GTFS_CARPOOL_URL)"
-# ENV GTFS_CARPOOL_URL=$gtfs_carpool_url
-# ARG GTFS_CARPOOL_URL
-# ENV GTFS_CARPOOL_URL=${GTFS_CARPOOL_URL}
 
 # GTFS Daten von FlexFeed derhuerst
-# ARG gtfs_felxfeed_url=https://github.com/bbnavi/gtfs-flex/archive/refs/heads/main.zip
-# ENV GTFS_FLEXFEED_URL=$gtfs_felxfeed_url
+ARG gtfs_felxfeed_url=https://github.com/bbnavi/gtfs-flex/archive/refs/heads/main.zip
+ENV GTFS_FLEXFEED_URL=$gtfs_felxfeed_url
 
 # OSM Tool zum erstellen von eigenen OSM Daten: Osmium
 # ARG osm_pbf_url=http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
@@ -48,13 +41,12 @@ ADD otp-config.json /opt/opentripplanner/build/
 ADD $OSM_PBF_URL /opt/opentripplanner/build/
 ADD $GTFS_URL /opt/opentripplanner/build/gtfs.zip
 RUN cp mfdz.bb.gtfs.zip /opt/opentripplanner/build/gtfs-carpool.zip
-# ADD $GTFS_FLEXFEED_URL /opt/opentripplanner/build/gtfs-derhuerst.zip
+ADD $GTFS_FLEXFEED_URL /opt/opentripplanner/build/gtfs-derhuerst.zip
 ADD dgm/* /opt/opentripplanner/build/
 
 # print version
 RUN java -jar otp-shaded.jar --version | tee build/version.txt
 
-# TODO: Auslagern in eigenen Step: build
 RUN java -Xmx$MEMORY -jar otp-shaded.jar --build --save /opt/opentripplanner/build/ | tee build/build.log
 
 #
