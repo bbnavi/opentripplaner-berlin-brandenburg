@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1.2
+
 ARG OTP_TAG=latest
 ARG OTP_IMAGE=mfdz/opentripplanner
 
@@ -28,8 +30,8 @@ ENV OSM_PBF_URL=$osm_pbf_url
 ARG memory=30G
 ENV MEMORY=$memory
 
-RUN apk add --update zip && \
-    rm -rf /var/cache/apk/*
+# RUN apk add --update zip && \
+#     rm -rf /var/cache/apk/*
 
 RUN mkdir -p /opt/opentripplanner/build/
 
