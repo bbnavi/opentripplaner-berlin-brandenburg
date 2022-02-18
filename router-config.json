@@ -20,7 +20,7 @@
     "bikeRentalPickupCost": 850,
     "bannedBikeRentalNetworks": ["car-sharing", "taxi", "cargo-bike"],
     "itineraryFilters" : {
-      "flexOnlyToDestination": true,
+      "flexOnlyToDestination": false,
       "bikeRentalDistanceRatio": 0.75,
       "parkAndRideDurationRatio": 0.6,
       "minBikeParkingDistance": 500
@@ -28,6 +28,9 @@
     "transit": {
       "searchThreadPoolSize": 4
     }
+  },
+  "flex": {
+    "maxTransferDurationSeconds": 300
   },
   "vectorTileLayers": [
     {
