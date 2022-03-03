@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.2
 
-ARG OTP_TAG=70c0f078c3acfb06cfe87218170c4b1f02cf93e7
+ARG OTP_TAG=dc0e947eb0e3eaa6f008e3bc86b1d6633940265a
 ARG OTP_IMAGE=mfdz/opentripplanner
 
 FROM $OTP_IMAGE:$OTP_TAG AS otp
