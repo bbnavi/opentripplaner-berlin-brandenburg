@@ -1,4 +1,4 @@
-ARG OTP_TAG=latest
+ARG OTP_TAG=c0489ad34b97e3ca83e3f7b99f1190c60bc514bb
 ARG OTP_IMAGE=mfdz/opentripplanner
 
 FROM $OTP_IMAGE:$OTP_TAG AS otp
