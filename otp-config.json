@@ -3,6 +3,10 @@
     "FlexRouting": true,
     "SandboxAPILegacyGraphQLApi": true,
     "SandboxAPIMapboxVectorTilesApi": true,
-    "FlexRouting": true
+    "FlexRouting": true,
+    "VehicleToStopHeuristics": true,
+    "TransferConstraints": false,
+    "OptimizeTransfers": false,
+    "ParallelRouting": true
   }
 }
