@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.2
 
-ARG OTP_TAG=dc0e947eb0e3eaa6f008e3bc86b1d6633940265a
+ARG OTP_TAG=2022-03-17-09_47
 ARG OTP_IMAGE=mfdz/opentripplanner
 
 FROM $OTP_IMAGE:$OTP_TAG AS otp
@@ -19,8 +19,8 @@ ENV GTFS_URL=$gtfs_url
 RUN --mount=type=secret,id=GTFS_CARPOOL_URL export GTFS_CARPOOL_URL=$(cat /run/secrets/GTFS_CARPOOL_URL) && curl -LJO $GTFS_CARPOOL_URL
 
 # GTFS Daten von FlexFeed derhuerst
-ARG gtfs_felxfeed_url=https://github.com/bbnavi/gtfs-flex/releases/download/2022-03-10/gtfs-flex.zip
-ENV GTFS_FLEXFEED_URL=$gtfs_felxfeed_url
+ARG gtfs_flexfeed_url=https://github.com/bbnavi/gtfs-flex/releases/download/2022-03-10/gtfs-flex.zip
+ENV GTFS_FLEXFEED_URL=$gtfs_flexfeed_url
 
 # OSM Tool zum erstellen von eigenen OSM Daten: Osmium
 # ARG osm_pbf_url=http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
