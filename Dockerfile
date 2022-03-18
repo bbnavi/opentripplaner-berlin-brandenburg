@@ -19,7 +19,7 @@ ENV GTFS_URL=$gtfs_url
 RUN --mount=type=secret,id=GTFS_CARPOOL_URL export GTFS_CARPOOL_URL=$(cat /run/secrets/GTFS_CARPOOL_URL) && curl -LJO $GTFS_CARPOOL_URL
 
 # GTFS Daten von FlexFeed derhuerst
-ARG gtfs_flexfeed_url=https://github.com/bbnavi/gtfs-flex/releases/download/2022-02-21-2/gtfs-flex.zip
+ARG gtfs_flexfeed_url=https://github.com/bbnavi/gtfs-flex/releases/download/2022-03-10/gtfs-flex.zip
 ENV GTFS_FLEXFEED_URL=$gtfs_flexfeed_url
 
 # OSM Tool zum erstellen von eigenen OSM Daten: Osmium
