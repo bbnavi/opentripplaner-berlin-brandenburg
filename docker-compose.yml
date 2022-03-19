@@ -4,7 +4,7 @@ services:
   opentripplanner:
     environment:
       - ROUTER=bb_angermuende
-      - API_URL=https://api-bbnavi.docker.localhost
+      - API_URL=https://staging.api.bbnavi.de/otp/
       - DT_IMAGE=bb-navi/digitransit-ui
       - DT_TAG=next
       - GTFS_URL=https://gtfs.mfdz.de/DELFI.BB.gtfs.zip
