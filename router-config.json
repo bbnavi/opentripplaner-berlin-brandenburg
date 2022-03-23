@@ -19,6 +19,18 @@
       "parkAndRideDurationRatio": 0.6,
       "minBikeParkingDistance": 500,
       "transitGeneralizedCostLimit": "900 + 2.0 x"
+    },
+    "maxAccessEgressDurationSecondsForMode": {
+      "WALK": 1200 // 20 minutes
+    },
+    "maxJourneyDuration": "12h"
+  },
+  "transit": {
+    "dynamicSearchWindow" : {
+      "minTransitTimeCoefficient" : 0.5,
+      "minWaitTimeCoefficient" : 0.5,
+      "minWinTimeMinutes" : 60,
+      "maxWinTimeMinutes" : 300
     }
   },
   "flex": {
