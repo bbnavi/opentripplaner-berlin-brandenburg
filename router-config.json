@@ -27,10 +27,10 @@
   },
   "transit": {
     "dynamicSearchWindow" : {
-      "minTransitTimeCoefficient" : 0.5,
-      "minWaitTimeCoefficient" : 0.5,
+      "minTransitTimeCoefficient" : 1.5,
+      "minWaitTimeCoefficient" : 1.5,
       "minWinTimeMinutes" : 60,
-      "maxWinTimeMinutes" : 300
+      "maxWinTimeMinutes" : 360
     }
   },
   "flex": {
