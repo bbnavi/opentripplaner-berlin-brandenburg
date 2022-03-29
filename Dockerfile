@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.2
 
-ARG OTP_TAG=2022-03-18-22_40
+ARG OTP_TAG=2022-03-28-13_44
 ARG OTP_IMAGE=mfdz/opentripplanner
 
 FROM $OTP_IMAGE:$OTP_TAG AS otp
