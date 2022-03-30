@@ -35,7 +35,7 @@ ADD $GTFS_URL /opt/opentripplanner/build/gtfs.zip
 
 # GTFS Daten von fahrgemeinschaft mifaz
 # URL ist hinterlegt in GITHUB Secrets: GTFS_CARPOOL_URL
-RUN --mount=type=secret,id=GTFS_CARPOOL_URL export GTFS_CARPOOL_URL=$(cat /run/secrets/GTFS_CARPOOL_URL) && curl -LJO -o /opt/opentripplanner/build/gtfs-carpool.zip $GTFS_CARPOOL_URL
+RUN --mount=type=secret,id=GTFS_CARPOOL_URL curl -L $(cat /run/secrets/GTFS_CARPOOL_URL) -o /opt/opentripplanner/build/gtfs-carpool.zip
 
 # print version
 RUN java -jar otp-shaded.jar --version | tee build/version.txt
