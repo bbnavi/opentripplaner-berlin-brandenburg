@@ -15,7 +15,7 @@ docker-compose -f docker-compose.yml -f stack.yml config > quantum.yml
 quantum-cli stack update --create --stack otp-berlin-brandenburg-tpwd-bb-navi --wait
 ```
 
-OSB Ausschneiden:
+OSM ausschneiden:
 https://docs.osmcode.org/osmium/latest/osmium-extract.html
 https://github.com/mfdz/gtfs-hub/blob/16427530380765078981105c0201d69fd44117ac/makefile#L53
 https://github.com/stadtnavi/digitransit-ansible/blob/master/roles/tilemaker/templates/build-mbtiles#L51
