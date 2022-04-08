@@ -10,7 +10,7 @@ ARG gtfs_url=http://vbb.de/vbbgtfs
 ENV GTFS_URL=$gtfs_url
 
 # GTFS Daten von FlexFeed derhuerst
-ARG gtfs_flexfeed_url=https://github.com/bbnavi/gtfs-flex/releases/download/2022-03-10/gtfs-flex.zip
+ARG gtfs_flexfeed_url=https://opendata.bbnavi.de/vbb-gtfs-flex/gtfs-flex.zip
 ENV GTFS_FLEXFEED_URL=$gtfs_flexfeed_url
 
 # OSM Tool zum erstellen von eigenen OSM Daten: Osmium
