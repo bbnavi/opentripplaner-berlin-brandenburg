@@ -99,6 +99,14 @@
       "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json",
       "network": "cargo-bike"
     },
+     {
+      "id": "nextbike_cb",
+      "type": "bike-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cb/gbfs.json",
+      "network": "citybike"
+    },
     {
       "id": "barshare-bike",
       "type": "bike-rental",
@@ -122,6 +130,14 @@
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/other/gbfs.json",
       "network": "cargo-bike"
+    },
+     {
+      "id": "donkey_berlin",
+      "type": "bike-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_berlin/gbfs.json",
+      "network": "citybike"
     }
   ]
 }
