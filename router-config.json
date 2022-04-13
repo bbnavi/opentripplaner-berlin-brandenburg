@@ -122,7 +122,7 @@
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/other/gbfs.json",
       "network": "cargo-bike"
-    }
+    },
      {
       "id": "donkey_berlin",
       "type": "bike-rental",
