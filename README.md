@@ -1,6 +1,6 @@
 # Vollständiges Log
 
-Um das vollständige Log sehen zu können muss die CLI erweiterung buildx verwendet werden:
+Um das vollständige Log sehen zu können muss die CLI Erweiterung buildx verwendet werden:
 (https://docs.docker.com/buildx/working-with-buildx/)
 
 ```
