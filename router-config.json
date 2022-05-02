@@ -21,8 +21,8 @@
       "minBikeParkingDistance": 500,
       "transitGeneralizedCostLimit": "900 + 2.0 x"
     },
-    "maxAccessEgressDurationSecondsForMode": {
-      "WALK": 1200 // 20 minutes
+    "maxAccessEgressDurationForMode": {
+      "WALK": "20m"
     },
     "maxJourneyDuration": "12h"
   },
