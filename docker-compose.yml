@@ -11,6 +11,7 @@ services:
       - OSM_URL=https://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
       - GTFS_CARPOOL_URL=""
       - GRAPH_BUILD_MEMORY=10G
+      - MEMORY=24G
       - OTP_PORT=8090
       - OTP_IMAGE=mfdz/opentripplanner
       - OTP_TAG=latest
