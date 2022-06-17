@@ -95,56 +95,49 @@
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
-      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dc/gbfs.json",
-      "network": "cargo-bike"
+      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dc/gbfs.json"
     },
     {
       "id": "nextbike_bn",
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
-      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json",
-      "network": "cargo-bike"
+      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json"
     },
     {
       "id": "nextbike_cb",
       "type": "bike-rental",
       "frequencySec": 60,
       "sourceType": "gbfs",
-      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cb/gbfs.json",
-      "network": "citybike"
+      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cb/gbfs.json"
     },
     {
       "id": "barshare-bike",
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
-      "url": "https://opendata.bbnavi.de/barshare/bicycle/gbfs.json",
-      "network": "cargo-bike"
+      "url": "https://opendata.bbnavi.de/barshare/bicycle/gbfs.json"
     },
     {
       "id": "barshare-car",
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
-      "url": "https://opendata.bbnavi.de/barshare/car/gbfs.json",
-      "network": "car-sharing"
+      "url": "https://opendata.bbnavi.de/barshare/car/gbfs.json"
     },
     {
       "id": "barshare-other",
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
-      "url": "https://opendata.bbnavi.de/barshare/other/gbfs.json",
-      "network": "cargo-bike"
+      "url": "https://opendata.bbnavi.de/barshare/other/gbfs.json"
     },
     {
       "id": "donkey_berlin",
       "type": "bike-rental",
       "frequencySec": 60,
       "sourceType": "gbfs",
-      "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_berlin/gbfs.json",
-      "network": "citybike"
+      "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_berlin/gbfs.json"
     }
   ]
 }
