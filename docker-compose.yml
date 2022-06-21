@@ -7,7 +7,7 @@ services:
       - API_URL=https://staging.api.bbnavi.de/otp/
       - DT_IMAGE=bb-navi/digitransit-ui
       - DT_TAG=next
-      - GTFS_URL=https://gtfs.mfdz.de/DELFI.BB.gtfs.zip
+      - GTFS_URL=https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip
       - OSM_URL=https://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
       - GTFS_CARPOOL_URL=""
       - GRAPH_BUILD_MEMORY=10G
