@@ -4,9 +4,9 @@ on:
   schedule:
     - cron:  '30 4 * * *'
   push:
-    branches: [ develop ]
+    branches: [ master ]
   pull_request:
-    branches: [ develop ]
+    branches: [ master ]
 
 jobs:
   prep:
@@ -28,7 +28,7 @@ jobs:
         cache-from: |
           type=registry,ref=registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg
         push: true
-        tags: registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:staging
+        tags: registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:production
         secrets: |
           "GTFS_CARPOOL_URL=${{ secrets.GTFS_CARPOOL_URL }}"
   deploy:
@@ -40,7 +40,7 @@ jobs:
       QUANTUM_USER: ${{ secrets.QUANTUM_USER }}
       QUANTUM_PASSWORD: ${{ secrets.QUANTUM_PASSWORD }}
       QUANTUM_ENDPOINT: "tpwd-bb-navi"
-      QUANTUM_STACK: "staging-otp-berlin-brandenburg"
+      QUANTUM_STACK: "opentripplaner-berlin-brandenburg-tpwd-bb-navi"
     steps:
       - uses: actions/checkout@v2
       - name: Deploy to Planetary Quantum

@@ -1,3 +1,3 @@
 ---
 version: '1.0'
-compose: docker-compose.yml
+compose: quantum.yml

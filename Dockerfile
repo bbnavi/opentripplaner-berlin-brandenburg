@@ -29,13 +29,12 @@ ENV OSM_PBF_URL=$osm_pbf_url
 ARG memory=30G
 ENV MEMORY=$memory
 
-# RUN apk add --update zip && \
-#     rm -rf /var/cache/apk/*
-
 RUN mkdir -p /opt/opentripplanner/build/
 
 # add build data
 # NOTE: we're using dockers caching here. Add items in order of least to most frequent changes
+ADD dgm/* /opt/opentripplanner/build/
+ADD $GTFS_FLEXFEED_URL /opt/opentripplanner/build/
 ADD router-config.json /opt/opentripplanner/build/
 ADD build-config.json /opt/opentripplanner/build/
 ADD otp-config.json /opt/opentripplanner/build/

@@ -11,7 +11,7 @@ services:
         traefik.docker.network: public
         traefik.enable: "true"
         traefik.frontend.passHostHeader: "true"
-        traefik.frontend.rule: Host:staging.api.bbnavi.de
+        traefik.frontend.rule: Host:api.angermuende.bbnavi.de,api.bbnavi.de
         traefik.port: '8080'
     environment:
       MEMORY: "24g"
