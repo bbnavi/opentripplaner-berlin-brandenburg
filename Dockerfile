@@ -7,11 +7,8 @@ FROM $OTP_IMAGE:$OTP_TAG AS otp
 
 # defined empty, so we can access the arg as env later again
 
-# GTFS der VBB
-# ARG gtfs_url=https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/GTFS.zip
-
-# GTFS Daten von delfi (#BBNAV-71)
-ARG gtfs_url=https://gtfs.mfdz.de/DELFI.BB.gtfs.zip
+# GTFS Daten vom VBB
+ARG gtfs_url=https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip
 ENV GTFS_URL=$gtfs_url
 
 # GTFS Daten von fahrgemeinschaft mifaz
