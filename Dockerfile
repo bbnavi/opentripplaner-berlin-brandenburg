@@ -12,8 +12,6 @@ ARG gtfs_url=https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensae
 ENV GTFS_URL=$gtfs_url
 
 # GTFS Daten von fahrgemeinschaft mifaz
-# URL ist hinterlegt in GITHUB Secrets: GTFS_CARPOOL_URL
-#RUN --mount=type=secret,id=GTFS_CARPOOL_URL export GTFS_CARPOOL_URL=$(cat /run/secrets/GTFS_CARPOOL_URL) && curl -LJO $GTFS_CARPOOL_URL
 ARG gtfs_carpool_feed_url=https://amarillo.bbnavi.de/gtfs/amarillo.bb.gtfs.zip
 ENV GTFS_CARPOOL_FEED_URL=$gtfs_carpool_feed_url
 
@@ -22,15 +20,11 @@ ARG gtfs_flexfeed_url=https://opendata.bbnavi.de/vbb-gtfs-flex/gtfs-flex.zip
 ENV GTFS_FLEXFEED_URL=$gtfs_flexfeed_url
 
 # OSM Tool zum erstellen von eigenen OSM Daten: Osmium
-# ARG osm_pbf_url=http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
 ARG osm_pbf_url=https://gtfs.mfdz.de/bb-buffered.osm.pbf
 ENV OSM_PBF_URL=$osm_pbf_url
 
 ARG memory=30G
 ENV MEMORY=$memory
-
-# RUN apk add --update zip && \
-#     rm -rf /var/cache/apk/*
 
 RUN mkdir -p /opt/opentripplanner/build/
 
@@ -41,7 +35,6 @@ ADD build-config.json /opt/opentripplanner/build/
 ADD otp-config.json /opt/opentripplanner/build/
 ADD $OSM_PBF_URL /opt/opentripplanner/build/
 ADD $GTFS_URL /opt/opentripplanner/build/gtfs.zip
-#RUN cp mfdz.bb.gtfs.zip /opt/opentripplanner/build/gtfs-carpool.zip
 ADD $GTFS_FLEXFEED_URL /opt/opentripplanner/build/
 ADD $GTFS_CARPOOL_FEED_URL /opt/opentripplanner/build/gtfs-carpool.gtfs.zip
 ADD dgm/* /opt/opentripplanner/build/
