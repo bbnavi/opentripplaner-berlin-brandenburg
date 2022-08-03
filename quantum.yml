@@ -18,7 +18,7 @@ services:
     environment:
       API_URL: https://api.bbnavi.de/otp/
       OTP_PORT: '8090'
-      MEMORY: '18G'
+      MEMORY: '16G'
     healthcheck:
       interval: 15s
       retries: 30
