@@ -14,4 +14,4 @@ services:
         traefik.frontend.rule: Host:staging.api.bbnavi.de
         traefik.port: '8080'
     environment:
-      MEMORY: "24g"
+      MEMORY: "18g"
