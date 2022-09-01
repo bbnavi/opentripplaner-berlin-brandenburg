@@ -1,12 +1,12 @@
 {
   "otpFeatures" : {
-    "FlexRouting": true,
     "SandboxAPILegacyGraphQLApi": true,
     "SandboxAPIMapboxVectorTilesApi": true,
     "FlexRouting": true,
     "VehicleToStopHeuristics": true,
     "TransferConstraints": false,
     "OptimizeTransfers": false,
-    "ParallelRouting": true
+    "ParallelRouting": true,
+    "ActuatorAPI": true
   }
 }
