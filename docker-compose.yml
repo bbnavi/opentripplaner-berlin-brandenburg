@@ -3,20 +3,8 @@ version: '3.7'
 services:
   opentripplanner:
     environment:
-      - ROUTER=bb_angermuende
       - API_URL=https://staging.api.bbnavi.de/otp/
-      - DT_IMAGE=bb-navi/digitransit-ui
-      - DT_TAG=next
-      - GTFS_URL=https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip
-      - OSM_URL=https://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf
-      - GTFS_CARPOOL_URL=""
-      - GRAPH_BUILD_MEMORY=10G
-      - MEMORY=18G
       - OTP_PORT=8090
-      - OTP_IMAGE=mfdz/opentripplanner
-      - OTP_TAG=latest
-      - CONFIG=bb_angermuende
-      - GEOCODING_BASE_URL=https://photon.stadtnavi.eu/pelias/v1
     image: registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:staging
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/"]
