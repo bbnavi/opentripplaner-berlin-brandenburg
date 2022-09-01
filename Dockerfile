@@ -47,4 +47,4 @@ RUN java -jar otp-shaded.jar --version | tee build/version.txt
 RUN java -Xmx$MEMORY -jar otp-shaded.jar --build --save /opt/opentripplanner/build/ | tee build/build.log
 
 #
-ENTRYPOINT java -Xmx$MEMORY -XX:+PrintFlagsFinal -jar otp-shaded.jar --load --serve /opt/opentripplanner/build/
+ENTRYPOINT java -Xmx$MEMORY -jar otp-shaded.jar --load --serve /opt/opentripplanner/build/
