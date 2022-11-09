@@ -105,13 +105,6 @@
       "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json"
     },
     {
-      "id": "nextbike_cb",
-      "type": "bike-rental",
-      "frequencySec": 60,
-      "sourceType": "gbfs",
-      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cb/gbfs.json"
-    },
-    {
       "id": "barshare-bike",
       "type": "bike-rental",
       "frequencySec": 600,
