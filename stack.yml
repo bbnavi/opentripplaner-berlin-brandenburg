@@ -8,6 +8,9 @@ services:
         constraints:
           - node.hostname == node-001.tpwd-bb-navi
       labels:
+        com.planetary-quantum.metrics.custom: opentripplanner_production
+        com.planetary-quantum.metrics.custom.path: /otp/actuators/prometheus
+        com.planetary-quantum.metrics.custom.port: 8080
         traefik.docker.network: public
         traefik.enable: "true"
         traefik.frontend.passHostHeader: "true"
