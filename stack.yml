@@ -12,6 +12,7 @@ services:
       labels:
         com.planetary-quantum.metrics.custom: opentripplanner_staging
         com.planetary-quantum.metrics.custom.path: /otp/actuators/prometheus
+        com.planetary-quantum.metrics.custom.port: 8080
         traefik.docker.network: public
         traefik.enable: "true"
         traefik.frontend.passHostHeader: "true"
