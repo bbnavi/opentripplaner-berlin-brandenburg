@@ -84,13 +84,6 @@
       "feedId": "mfdz"
     },
     {
-      "type": "stop-time-updater",
-      "frequencySec": 15,
-      "sourceType": "gtfs-http",
-      "url": "https://bbnavi-gtfs-rt-feed.jannisr.de/feed",
-      "feedId": "3"
-    },
-    {
       "id": "nextbike_dc",
       "type": "bike-rental",
       "frequencySec": 600,
