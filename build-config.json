@@ -1,6 +1,5 @@
 {
   "areaVisibility": true,
-  "parentStopLinking": true,
   "staticBikeParkAndRide": true,
   "maxTransferDurationSeconds": 900,
   "osmCacheDataInMem": true,

@@ -15,7 +15,6 @@
     "bikeRentalPickupCost": 60,
     "carReluctance": 3.0,
     "itineraryFilters" : {
-      "flexOnlyToDestination": false,
       "bikeRentalDistanceRatio": 0.75,
       "parkAndRideDurationRatio": 0.6,
       "minBikeParkingDistance": 500,
@@ -79,47 +78,40 @@
      {
       "type": "stop-time-updater",
       "frequencySec": 60,
-      "sourceType": "gtfs-http",
       "url": "https://amarillo.bbnavi.de/gtfs/amarillo.bb.gtfsrt.pbf",
       "feedId": "mfdz"
     },
     {
-      "id": "nextbike_dc",
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dc/gbfs.json"
     },
     {
-      "id": "nextbike_bn",
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json"
     },
     {
-      "id": "barshare-bike",
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/bicycle/gbfs.json"
     },
     {
-      "id": "barshare-car",
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/car/gbfs.json"
     },
     {
-      "id": "barshare-other",
       "type": "bike-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/other/gbfs.json"
     },
     {
-      "id": "donkey_berlin",
       "type": "bike-rental",
       "frequencySec": 60,
       "sourceType": "gbfs",
