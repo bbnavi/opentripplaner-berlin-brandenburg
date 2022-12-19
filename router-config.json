@@ -14,7 +14,7 @@
     "bikeRentalPickupTime": 60,
     "bikeRentalPickupCost": 60,
     "carReluctance": 3.0,
-    "itineraryFilters" : {
+    "itineraryFilters": {
       "bikeRentalDistanceRatio": 0.75,
       "parkAndRideDurationRatio": 0.6,
       "minBikeParkingDistance": 500,
@@ -26,11 +26,11 @@
     "maxJourneyDuration": "12h"
   },
   "transit": {
-    "dynamicSearchWindow" : {
-      "minTransitTimeCoefficient" : 1.5,
-      "minWaitTimeCoefficient" : 1.5,
-      "minWinTimeMinutes" : 60,
-      "maxWinTimeMinutes" : 360
+    "dynamicSearchWindow": {
+      "minTransitTimeCoefficient": 1.5,
+      "minWaitTimeCoefficient": 1.5,
+      "minWinTimeMinutes": 60,
+      "maxWinTimeMinutes": 360
     }
   },
   "flex": {
@@ -75,7 +75,7 @@
     }
   ],
   "updaters": [
-     {
+    {
       "type": "stop-time-updater",
       "frequencySec": 60,
       "url": "https://amarillo.bbnavi.de/gtfs/amarillo.bb.gtfsrt.pbf",
