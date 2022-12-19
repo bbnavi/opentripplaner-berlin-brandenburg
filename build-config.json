@@ -7,7 +7,8 @@
     {
       "source": "https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip",
       "type": "gtfs",
-      "feedId": "vbb"
+      "feedId": "vbb",
+      "discardMinTransferTimes": true
     },
     {
       "source": "https://opendata.bbnavi.de/vbb-gtfs-flex/gtfs-flex.zip",

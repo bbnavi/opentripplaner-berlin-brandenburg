@@ -4,7 +4,6 @@
     "SandboxAPIMapboxVectorTilesApi": true,
     "FlexRouting": true,
     "VehicleToStopHeuristics": true,
-    "TransferConstraints": false,
     "ParallelRouting": true,
     "ActuatorAPI": true,
     "ConsiderPatternsForDirectTransfers": false
