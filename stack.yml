@@ -19,7 +19,7 @@ services:
         traefik.frontend.rule: Host:staging.api.bbnavi.de
         traefik.port: '8080'
     environment:
-      MEMORY: "18g"
+      JAVA_OPTS: "-Xmx18g"
 
 networks:
   quantum-custom-metrics:
