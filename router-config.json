@@ -67,7 +67,7 @@
     {
       "name": "parking",
       "type": "VehicleParking",
-      "mapper": "Digitransit",
+      "mapper": "Stadtnavi",
       "maxZoom": 20,
       "minZoom": 14,
       "cacheMaxSeconds": 60,
