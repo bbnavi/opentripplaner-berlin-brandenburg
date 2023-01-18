@@ -6,6 +6,7 @@
     "VehicleToStopHeuristics": true,
     "ParallelRouting": true,
     "ActuatorAPI": true,
-    "ConsiderPatternsForDirectTransfers": false
+    "ConsiderPatternsForDirectTransfers": false,
+    "AsyncGraphQLFetchers": true
   }
 }
