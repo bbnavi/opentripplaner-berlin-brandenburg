@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.2
 
-ARG OTP_TAG=2.3.0_2023-01-23T08-55
+ARG OTP_TAG=2.3.0_2023-01-25T11-11
 ARG OTP_IMAGE=docker.io/opentripplanner/opentripplanner
 
 FROM $OTP_IMAGE:$OTP_TAG AS otp
