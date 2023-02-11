@@ -78,7 +78,7 @@
     {
       "type": "stop-time-updater",
       "frequencySec": 60,
-      "url": "https://amarillo-dev.mfdz.de/gtfs/amarillo.bb.gtfsrt.json",
+      "url": "https://amarillo-dev.mfdz.de/gtfs/amarillo.bb.gtfsrt.pbf",
       "feedId": "mfdz"
     },
     {
