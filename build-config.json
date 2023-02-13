@@ -16,7 +16,7 @@
       "feedId": "flex"
     },
     {
-      "source": "https://amarillo.bbnavi.de/gtfs/amarillo.bb.gtfs.zip",
+      "source": "https://amarillo-dev.mfdz.de/gtfs/amarillo.bb.gtfs.zip",
       "type": "gtfs",
       "feedId": "mfdz"
     }
