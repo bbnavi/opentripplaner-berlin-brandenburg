@@ -30,7 +30,9 @@
       "minTransitTimeCoefficient": 1.5,
       "minWaitTimeCoefficient": 1.5,
       "minWinTimeMinutes": 60,
-      "maxWinTimeMinutes": 360
+      "maxWinTimeMinutes": 360,
+      "minWindow": "1h",
+      "maxWindow": "6h"
     }
   },
   "flex": {
