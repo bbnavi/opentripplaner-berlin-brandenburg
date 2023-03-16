@@ -1,5 +1,5 @@
 {
-  "areaVisibility": false,
+  "areaVisibility": true,
   "parentStopLinking": true,
   "osmWayPropertySet": "germany",
   "subwayAccessTime": 0,
@@ -8,7 +8,7 @@
   "multiThreadElevationCalculations": false,
   "dataImportReport": true,
   "buildReportDir": "build-report",
-  "maxTransferDurationSeconds": 900, // 15 minutes
+  "maxTransferDurationSeconds": 900,
   "islandWithStopsMaxSize": 300,
   "islandWithoutStopsMaxSize": 300
 }
