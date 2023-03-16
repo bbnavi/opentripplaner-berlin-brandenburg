@@ -44,7 +44,7 @@ ADD dgm/* /opt/opentripplanner/build/
 # print version
 RUN java -jar otp-shaded.jar --version | tee build/version.txt
 
-RUN java -Xmx$MEMORY -jar otp-shaded.jar --build --save /opt/opentripplanner/build/ | tee build/build.log
+RUN java -Xmx$MEMORY -jar otp-shaded.jar --build --save /opt/opentripplanner/build/
 
 ENV TZ="Europe/Berlin"
 #
