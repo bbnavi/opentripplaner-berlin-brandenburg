@@ -27,5 +27,9 @@
       "timeZone": "Europe/Berlin",
       "osmTagMapping": "germany"
     }
-  ]
+  ],
+  "islandPruning" : {
+    "islandWithStopsMaxSize" : 200,
+    "islandWithoutStopsMaxSize" : 200
+  }
 }
