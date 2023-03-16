@@ -8,5 +8,7 @@
   "multiThreadElevationCalculations": false,
   "dataImportReport": true,
   "buildReportDir": "build-report",
-  "maxTransferDurationSeconds": 900 // 15 minutes
+  "maxTransferDurationSeconds": 900 // 15 minutes,
+  "islandWithStopsMaxSize": 300,
+  "islandWithoutStopsMaxSize": 300
 }
