@@ -11,11 +11,10 @@
     "bikeTriangleSafetyFactor": 0.4,
     "bikeTriangleSlopeFactor": 0.3,
     "bikeTriangleTimeFactor": 0.3,
-    "bikeRentalPickupTime": 180,
-    "bikeRentalPickupCost": 850,
+    "bikeRentalPickupTime": 60,
+    "bikeRentalPickupCost": 60,
     "carReluctance": 3.0,
-    "itineraryFilters" : {
-      "flexOnlyToDestination": false,
+    "itineraryFilters": {
       "bikeRentalDistanceRatio": 0.75,
       "parkAndRideDurationRatio": 0.6,
       "minBikeParkingDistance": 500,
@@ -27,11 +26,13 @@
     "maxJourneyDuration": "12h"
   },
   "transit": {
-    "dynamicSearchWindow" : {
-      "minTransitTimeCoefficient" : 1.5,
-      "minWaitTimeCoefficient" : 1.5,
-      "minWinTimeMinutes" : 60,
-      "maxWinTimeMinutes" : 360
+    "dynamicSearchWindow": {
+      "minTransitTimeCoefficient": 1.5,
+      "minWaitTimeCoefficient": 1.5,
+      "minWinTimeMinutes": 60,
+      "maxWinTimeMinutes": 360,
+      "minWindow": "1h",
+      "maxWindow": "6h"
     }
   },
   "flex": {
@@ -65,10 +66,37 @@
       "cacheMaxSeconds": 60,
       "expansionFactor": 0.5
     },
+    // just free-floating vehicles
+    {
+      "name": "rentalVehicles",
+      "type": "VehicleRentalVehicle",
+      "mapper": "DigitransitRealtime",
+      "maxZoom": 20,
+      "minZoom": 14,
+      "cacheMaxSeconds": 60
+    },
+    // just rental stations
+    {
+      "name": "rentalStations",
+      "type": "VehicleRentalStation",
+      "mapper": "Digitransit",
+      "maxZoom": 20,
+      "minZoom": 14,
+      "cacheMaxSeconds": 600
+    },
+    // Contains just stations and realtime information for them
+    {
+      "name": "realtimeRentalStations",
+      "type": "VehicleRentalStation",
+      "mapper": "DigitransitRealtime",
+      "maxZoom": 20,
+      "minZoom": 14,
+      "cacheMaxSeconds": 60
+    },
     {
       "name": "parking",
       "type": "VehicleParking",
-      "mapper": "Digitransit",
+      "mapper": "Stadtnavi",
       "maxZoom": 20,
       "minZoom": 14,
       "cacheMaxSeconds": 60,
@@ -76,47 +104,47 @@
     }
   ],
   "updaters": [
-     {
+    {
       "type": "stop-time-updater",
       "frequencySec": 60,
-      "sourceType": "gtfs-http",
-      "url": "https://amarillo.bbnavi.de/gtfs/amarillo.bb.gtfsrt.pbf",
+      "url": "https://amarillo-dev.mfdz.de/gtfs/amarillo.bb.gtfsrt.pbf",
       "feedId": "mfdz"
     },
     {
-      "id": "nextbike_dc",
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dc/gbfs.json"
     },
     {
-      "id": "nextbike_bn",
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json"
     },
     {
-      "id": "barshare-bike",
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/bicycle/gbfs.json"
     },
     {
-      "id": "barshare-car",
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/car/gbfs.json"
     },
     {
-      "id": "barshare-other",
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/other/gbfs.json"
+    },
+    {
+      "type": "vehicle-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_berlin/gbfs.json"
     }
   ]
 }

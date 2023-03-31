@@ -1,14 +1,35 @@
 {
   "areaVisibility": true,
-  "parentStopLinking": true,
-  "osmWayPropertySet": "germany",
-  "subwayAccessTime": 0,
   "staticBikeParkAndRide": true,
-  "writeCachedElevations": false,
-  "multiThreadElevationCalculations": false,
-  "dataImportReport": true,
-  "buildReportDir": "build-report",
   "maxTransferDurationSeconds": 900,
-  "islandWithStopsMaxSize": 300,
-  "islandWithoutStopsMaxSize": 300
+  "osmCacheDataInMem": true,
+  "transitFeeds": [
+    {
+      "source": "https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip",
+      "type": "gtfs",
+      "feedId": "vbb",
+      "discardMinTransferTimes": true
+    },
+    {
+      "source": "https://opendata.bbnavi.de/vbb-gtfs-flex/gtfs-flex.zip",
+      "type": "gtfs",
+      "feedId": "flex"
+    },
+    {
+      "source": "https://amarillo-dev.mfdz.de/gtfs/amarillo.bb.gtfs.zip",
+      "type": "gtfs",
+      "feedId": "mfdz"
+    }
+  ],
+  "osm": [
+    {
+      "source": "https://gtfs.mfdz.de/bb-buffered.osm.pbf",
+      "timeZone": "Europe/Berlin",
+      "osmTagMapping": "germany"
+    }
+  ],
+  "islandPruning" : {
+    "islandWithStopsMaxSize" : 200,
+    "islandWithoutStopsMaxSize" : 200
+  }
 }

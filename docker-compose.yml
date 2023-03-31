@@ -14,6 +14,21 @@ services:
     networks:
       - public
       - quantum-custom-metrics
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == node-002.tpwd-bb-navi
+      labels:
+        com.planetary-quantum.metrics.custom: opentripplanner_staging
+        com.planetary-quantum.metrics.custom.path: /otp/actuators/prometheus
+        com.planetary-quantum.metrics.custom.port: 8080
+        traefik.docker.network: public
+        traefik.enable: "true"
+        traefik.frontend.passHostHeader: "true"
+        traefik.frontend.rule: Host:staging.api.bbnavi.de
+        traefik.port: '8080'
+
 
 networks:
   public:

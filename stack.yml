@@ -2,6 +2,8 @@ version: '3.7'
 
 services:
   opentripplanner:
+    networks:
+      - quantum-custom-metrics
     deploy:
       replicas: 1
       placement:
@@ -17,4 +19,8 @@ services:
         traefik.frontend.rule: Host:api.angermuende.bbnavi.de,api.bbnavi.de
         traefik.port: '8080'
     environment:
-      MEMORY: "24G"
+      JAVA_OPTS: "-Xmx18g"
+
+networks:
+  quantum-custom-metrics:
+    external: true

@@ -4,9 +4,9 @@
     "SandboxAPIMapboxVectorTilesApi": true,
     "FlexRouting": true,
     "VehicleToStopHeuristics": true,
-    "TransferConstraints": false,
-    "OptimizeTransfers": false,
     "ParallelRouting": true,
-    "ActuatorAPI": true
+    "ActuatorAPI": true,
+    "ConsiderPatternsForDirectTransfers": false,
+    "AsyncGraphQLFetchers": true
   }
 }
