@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.2
 
-ARG OTP_TAG=2.3.0_2023-04-18T07-09
-ARG OTP_IMAGE=docker.io/opentripplanner/opentripplanner
+ARG OTP_TAG=log-format
+ARG OTP_IMAGE=docker.io/lehrenfried/opentripplanner
 
 FROM $OTP_IMAGE:$OTP_TAG AS otp
 
