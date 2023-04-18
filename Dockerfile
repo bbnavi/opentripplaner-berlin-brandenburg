@@ -15,5 +15,6 @@ ADD dgm/* /var/otp/
 ENV JAVA_OPTS="-Xmx30G -Dotp.logging.format=json"
 RUN java $JAVA_OPTS -cp @/app/jib-classpath-file @/app/jib-main-class-file /var/otp/ --build --save
 
+
 ENV TZ="Europe/Berlin"
 ENTRYPOINT java $JAVA_OPTS -cp @/app/jib-classpath-file @/app/jib-main-class-file /var/otp/ --load --serve
