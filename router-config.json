@@ -142,6 +142,24 @@
     },
     {
       "type": "vehicle-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://opendata.bbnavi.de/flotte/flotte-berlin/gbfs.json"
+    },
+    {
+      "type": "vehicle-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://opendata.bbnavi.de/flotte/flotte-potsdam/gbfs.json"
+    },
+    {
+      "type": "vehicle-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://opendata.bbnavi.de/flotte/flotte-brandenburg/gbfs.json"
+    },
+    {
+      "type": "vehicle-rental",
       "frequencySec": 60,
       "sourceType": "gbfs",
       "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_berlin/gbfs.json"
