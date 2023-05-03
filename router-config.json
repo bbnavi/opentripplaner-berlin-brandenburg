@@ -124,37 +124,37 @@
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 600,
+      "frequencySec": 60,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/bicycle/gbfs.json"
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 600,
+      "frequencySec": 60,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/car/gbfs.json"
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 600,
+      "frequencySec": 60,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/other/gbfs.json"
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 600,
+      "frequencySec": 60,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/flotte/flotte-berlin/gbfs.json"
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 600,
+      "frequencySec": 60,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/flotte/flotte-potsdam/gbfs.json"
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 600,
+      "frequencySec": 60,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/flotte/flotte-brandenburg/gbfs.json"
     },
