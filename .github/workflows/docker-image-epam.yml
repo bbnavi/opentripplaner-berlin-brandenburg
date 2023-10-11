@@ -26,6 +26,6 @@ jobs:
         cache-from: |
           type=registry,ref=git.bbnavi.vk256.eu/bbnavi/opentripplaner-berlin-brandenburg:production
         push: true
-        tags: rregistry,ref=git.bbnavi.vk256.eu/bbnavi/opentripplaner-berlin-brandenburg:production
+        tags: git.bbnavi.vk256.eu/bbnavi/opentripplaner-berlin-brandenburg:production
         secrets: |
           "GTFS_CARPOOL_URL=${{ secrets.GTFS_CARPOOL_URL }}"
