@@ -24,8 +24,8 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         cache-from: |
-          type=registry,ref=git.bbnavi.de/bbnavi/opentripplaner-berlin-brandenburg:production
+          type=registry,ref=git.bbnavi.de/bbnavi-reg/opentripplaner-berlin-brandenburg:production
         push: true
-        tags: git.bbnavi.de/bbnavi/opentripplaner-berlin-brandenburg:production
+        tags: git.bbnavi.de/bbnavi-reg/opentripplaner-berlin-brandenburg:production
         secrets: |
           "GTFS_CARPOOL_URL=${{ secrets.GTFS_CARPOOL_URL }}"
