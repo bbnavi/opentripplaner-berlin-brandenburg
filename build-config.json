@@ -14,12 +14,12 @@
       "source": "https://opendata.bbnavi.de/vbb-gtfs-flex/gtfs-flex.zip",
       "type": "gtfs",
       "feedId": "flex"
-    },
-    {
-      "source": "https://amarillo-dev.mfdz.de/gtfs/amarillo.bb.gtfs.zip",
-      "type": "gtfs",
-      "feedId": "mfdz"
     }
+    //{
+    //  "source": "https://amarillo-dev.mfdz.de/gtfs/amarillo.bb.gtfs.zip",
+    //  "type": "gtfs",
+    //  "feedId": "mfdz"
+    //}
   ],
   "osm": [
     {
