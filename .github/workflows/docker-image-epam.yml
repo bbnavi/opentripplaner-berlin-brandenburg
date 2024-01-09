@@ -8,7 +8,7 @@ on:
 
 jobs:
   prep:
-    # runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest - Shared runner times out
     runs-on: self-hosted
     env:
       GTFS_CARPOOL_URL: ${{ secrets.GTFS_CARPOOL_URL }}
