@@ -14,7 +14,8 @@ env:
 
 jobs:
   build-and-push-image:
-    runs-on: self-hosted
+    runs-on: 
+      group: self-hosted-runners
       labels: otp
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
