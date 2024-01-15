@@ -1,37 +1,40 @@
-version: '3.7'
-
+version: '3.3'
 services:
   opentripplanner:
-    environment:
-      - API_URL=https://api.bbnavi.de/otp/
-      - OTP_PORT=8090
-    image: registry.gitlab.tpwd.de/tpwd/bb-navi/opentripplaner-berlin-brandenburg:production
+    image: git.bbnavi.de/bbnavi-reg/opentripplaner-berlin-brandenburg:production
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      test:
+       - CMD
+       - curl
+       - -f
+       - http://localhost:8080/
       interval: 15s
       timeout: 10s
       retries: 30
+    environment:
+      API_URL: https://api.bbnavi.de/otp/
+      OTP_PORT: '8090'
     networks:
-      - public
-      - quantum-custom-metrics
+     - public
+    logging:
+      driver: awslogs
     deploy:
-      replicas: 1
+      replicas: 2
+      labels:
+        traefik.http.routers.bbnavi-api.rule: Host(`api.bbnavi.de`)
+        traefik.http.routers.bbnavi-api.tls.certresolver: acme
+        traefik.http.services.bbnavi-api.loadbalancer.server.port: '8080'
+        traefik.http.routers.bbnavi-api.entrypoints: https
+        traefik.http.routers.bbnavi-api.tls: 'true'
+        traefik.docker.network: public
+        traefik.enable: 'true'
       placement:
         constraints:
-          - node.hostname == node-002.tpwd-bb-navi
-      labels:
-        com.planetary-quantum.metrics.custom: opentripplanner_staging
-        com.planetary-quantum.metrics.custom.path: /otp/actuators/prometheus
-        com.planetary-quantum.metrics.custom.port: 8080
-        traefik.docker.network: public
-        traefik.enable: "true"
-        traefik.frontend.passHostHeader: "true"
-        traefik.frontend.rule: Host:staging.api.bbnavi.de
-        traefik.port: '8080'
-
-
+         - node.role == worker
+      resources:
+        reservations:
+          memory: 4096M
 networks:
   public:
     external: true
-  quantum-custom-metrics:
-    external: true
+
