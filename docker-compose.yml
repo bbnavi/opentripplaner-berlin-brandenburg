@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   opentripplanner:
-    image: git.bbnavi.de/bbnavi-reg/opentripplaner-berlin-brandenburg:production
+    image: ghcr.io/bbnavi/opentripplaner-berlin-brandenburg:master
     healthcheck:
       test:
        - CMD
