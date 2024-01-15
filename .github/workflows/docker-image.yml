@@ -48,11 +48,11 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-  # deploy: 
-  #    runs-on: self-hosted
-  #    needs: build-and-push-image
-  #    steps: 
-  #      - uses: actions/checkout@v2
-  #      - name: Deploy Stack
-  #        run: |
-  #          docker stack deploy --compose-file docker-compose.yml bbnavi-otp
+  deploy: 
+     runs-on: [self-hosted, deploy]
+     needs: build-and-push-image
+     steps: 
+       - uses: actions/checkout@v2
+       - name: Deploy Stack
+         run: |
+           docker stack deploy --compose-file docker-compose.yml bbnavi-otp
