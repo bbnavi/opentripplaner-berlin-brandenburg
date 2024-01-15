@@ -3,10 +3,6 @@ name: Docker Image CI
 on:
   schedule:
     - cron:  '30 4 * * *'
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 env:
   REGISTRY: ghcr.io
@@ -55,4 +51,5 @@ jobs:
        - uses: actions/checkout@v2
        - name: Deploy Stack
          run: |
+           sleep 60
            docker stack deploy --compose-file docker-compose.yml bbnavi-otp
