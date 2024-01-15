@@ -23,7 +23,7 @@
   ],
   "osm": [
     {
-      "source": "https://gtfs.mfdz.de/bb-buffered.osm.pbf",
+      "source": "https://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf",
       "timeZone": "Europe/Berlin",
       "osmTagMapping": "germany"
     }
