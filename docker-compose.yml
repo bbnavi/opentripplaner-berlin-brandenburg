@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   opentripplanner:
-    image: ghcr.io/bbnavi/opentripplaner-berlin-brandenburg:master
+    image: ghcr.io/bbnavi/opentripplaner-berlin-brandenburg:nightly
     healthcheck:
       test:
        - CMD
